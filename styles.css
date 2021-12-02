@@ -348,6 +348,10 @@ template {
   display: none;
 }
 
+/*normalise css ends here*/
+
+
+
 html {
     scroll-behavior: smooth;
   }
@@ -358,6 +362,7 @@ body {
     margin: 0;
 }
 
+/*navigation bar*/
 .topnav {
     overflow: hidden;
     background-color: gainsboro;
@@ -408,7 +413,35 @@ body {
       text-align: left;
     }
 }
-  
+
+/* title typing out effect*/
+.titlecontain {
+    display: inline-block;
+}
+
+.typingout {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    font-size: 3.5rem;
+    width: 0;
+    animation: 
+      typing 1s steps(20, end) forwards,
+      blink .8s infinite;
+    text-align: center;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-color: orange; }
+}
+
+/* for the image gallery*/  
 /* Position the image container (needed to position the left and right arrows) */
 .container {
     position: relative;
